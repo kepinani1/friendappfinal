@@ -1,4 +1,4 @@
-// Dependencies. If you note, I made another function in the survey.html page. I just wasn't sure if the applicable function for finding array difference between the user and the friends array should be inserted here or in the survey.html file.
+// Dependencies.
 var friends = require('../data/friends.js');
 
 // Export the function

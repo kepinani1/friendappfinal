@@ -144,7 +144,6 @@
       </section>
         <br>
         <br>
-<!-- Materialize Modal Trigger/Submit Button -->
 <input type="submit" id="submitButton" class="btn btn-primary mb-2 btn-block" data-toggle="modal" data-target="#matchModal">
 </div>
 </div>
@@ -180,7 +179,6 @@
 </body>
 </html>
 
-<!-- Materialize Modal Structure -->
 <div id="modal1" class="modal">
 <div class="modal-content">
 <h4>Meet Your New BFF</h4>
@@ -197,7 +195,7 @@
 <script type="text/javascript">
 	$("#submitButton").on("click", function(event) {
 		event.preventDefault();
-		//save answers into object
+		//save answers into object of newProfile
 		var newProfile = {
 			name: $("#name-input").val().trim(),
 			photo: $("#photo-input").val().trim(),
@@ -218,8 +216,7 @@
 		
 		//POST request to API endpoint, sending newProfile object
 		$.post("/api/friends", newProfile, function(data) {
-			//data variable contains best-matched profile
-			//write name and image URL into Bootstrap Modal
+			//post the best match into modal
 			$("#mbName").text(data.name);
 			$("#mbPhoto").attr("src", data.photo);
 		});
